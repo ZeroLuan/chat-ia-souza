@@ -37,7 +37,7 @@ Node.js, Express, groq-sdk, dotenv, HTML/CSS/JS puro (marked + DOMPurify via CDN
 
 ### Desafio 3 — prompts
 
-**Antigo (genérico):** "Você é um assistente útil." <!-- TODO: ajustar para o prompt usado no vídeo/aula, se diferente -->
+**Antigo (do vídeo):** "Não responda nada fora do contexto de ciência da computação e programação."
 
 **Novo:** "Você é o 'Monitor de Algoritmos', um tutor de Algoritmos e Estrutura de Dados do curso de ADS do IFBA Campus Irecê. Responda sempre em português do Brasil, de forma didática e curta, com exemplos de código quando ajudar. Se a pergunta não for sobre computação ou programação, recuse educadamente e convide o aluno a perguntar algo da área."
 
@@ -71,7 +71,7 @@ Qualquer código em `main.js` é público: basta abrir o DevTools para ver a cha
 
 **2. Erro que mais tempo levou para resolver** <!-- TODO: preencher com o erro real da dupla (mensagem, causa, como descobriram) -->
 
-**3. O que acontece ao mudar o system prompt?** <!-- TODO: perguntar algo fora de computação com o prompt atual e com um prompt sem restrição; transcrever as duas respostas -->
+**3. O que acontece ao mudar o system prompt?** <!-- TODO: perguntar algo fora de computação (ex.: receita de bolo) com o prompt original do vídeo e depois com um prompt sem restrição (ex.: "Você é um assistente útil."); transcrever as duas respostas -->
 
 **4. O modelo inventou alguma informação?** <!-- TODO: transcrever trecho, ou descrever cenário. Dica de cenário: pedir referências bibliográficas ou a assinatura de uma função de biblioteca pouco conhecida -->
 
