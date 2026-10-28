@@ -21,11 +21,13 @@ const SYSTEM_PROMPT =
   'e convide o aluno a perguntar algo da área.';
 
 // ---------- Desafio 4: modelos permitidos + preços (US$ por 1M de tokens) ----------
+// Os modelos Llama foram descontinuados na Groq; usamos os equivalentes disponíveis.
+// Para voltar ao Llama (se reativado), troque os nomes abaixo.
 const MODELOS = {
-  'llama-3.3-70b-versatile': { entrada: 0.59, saida: 0.79 },
-  'llama-3.1-8b-instant': { entrada: 0.05, saida: 0.08 },
+  'openai/gpt-oss-120b': { entrada: 0.15, saida: 0.6 },
+  'openai/gpt-oss-20b': { entrada: 0.075, saida: 0.3 },
 };
-const MODELO_PADRAO = 'llama-3.3-70b-versatile';
+const MODELO_PADRAO = 'openai/gpt-oss-120b';
 
 // ---------- Desafios 1 e 8: memória por sessão ----------
 const MAX_TROCAS = 10; // 10 trocas = 20 mensagens

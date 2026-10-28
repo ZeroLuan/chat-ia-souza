@@ -1,6 +1,8 @@
 # Chat de IA com a API da Groq
 
-Chat web que consome um modelo Llama 3.3 70B pela API da Groq. Atividade da Aula 4 — TEC13 Engenharia de IA Aplicada, IFBA Campus Irecê.
+Chat web que consome um modelo de ~100B parâmetros (GPT-OSS 120B) pela API da Groq. Atividade da Aula 4 — TEC13 Engenharia de IA Aplicada, IFBA Campus Irecê.
+
+> **Nota:** os modelos Llama (`llama-3.3-70b-versatile` e `llama-3.1-8b-instant`) retornam `404 model_not_found` na Groq hoje (descontinuados). Trocamos por `openai/gpt-oss-120b` e `openai/gpt-oss-20b`. A troca é feita no objeto `MODELOS` de `index.js`.
 
 **Dupla:** NOME COMPLETO 1, NOME COMPLETO 2 <!-- TODO: preencher -->
 
@@ -46,13 +48,13 @@ Node.js, Express, groq-sdk, dotenv, HTML/CSS/JS puro (marked + DOMPurify via CDN
 2. "Qual a receita de bolo de cenoura?" → antes: ...; depois: recusa educada.
 3. "Quem ganhou a Copa de 2002?" → antes: ...; depois: recusa educada.
 
-### Desafio 4 — comparação 70B vs 8B
+### Desafio 4 — comparação 120B vs 20B
 
-<!-- TODO: fazer a mesma pergunta nos dois modelos e registrar qualidade e tempo (o painel mostra os ms) -->
+<!-- TODO: fazer a mesma pergunta nos dois modelos pela interface e registrar qualidade e tempo (o painel mostra os ms). Referência: 120B respondeu uma pergunta curta em ~870 ms -->
 
 ### Desafio 5 — projeção de custo
 
-Preços usados (US$ por 1M de tokens): 70B = 0,59 entrada / 0,79 saída; 8B = 0,05 / 0,08. O painel calcula o custo real por mensagem e projeta 1.000 conversas multiplicando o custo da sessão por 1.000. <!-- TODO: colocar o valor medido -->
+Preços usados (US$ por 1M de tokens): 120B = 0,15 entrada / 0,60 saída; 20B = 0,075 / 0,30. Medição real: uma pergunta curta no 120B gastou 334 tokens, ≈ US$ 0,00012, ou seja ≈ US$ 0,12 para 1.000 conversas desse tamanho. O painel calcula o custo real por mensagem e projeta 1.000 conversas multiplicando o custo da sessão por 1.000.
 
 ### Desafio 9 — o risco de XSS
 
